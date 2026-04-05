@@ -3,3 +3,103 @@
  Template: astra
 */
 
+:root {
+    --primary-color : #ECE2DA;
+    --secondary-color : #FFFFFF;
+    --accent-color : #3B8E46;
+    --text-color : #000000;
+    --title-color : #D2776A;
+    --button-color : #DC9F96;
+    --button-hover-color : #C02E44;
+}
+
+body {
+    background-color: var(--secondary-color);
+    font-family: "Syne", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+#page {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: var(--secondary-color);
+}
+
+.site-primary-header-wrap {
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+}
+
+.menu-link {
+    font-size: 16px;
+}
+
+.menu-admin {
+    margin-right: 40px;
+}
+
+.menu-meet {
+    margin-right: 30px;
+}
+
+.menu-link:hover {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.ast-custom-button {
+    height: 80px;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+.ast-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.img-drink {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+}
+
+.img-plant {
+    position: relative;
+    object-fit: cover;
+    height: 100%;
+    top: 70px;
+}
+
+.img-plant-left{
+    left : 170px;
+}
+
+.img-plant-right{
+    right : 180px;
+}
+
+.wp-block-heading.has-text-align-center {
+    color: var(--accent-color);
+    font-size: 38px;
+    font-weight: 800;
+}
+
+.wp-block-cover {
+    border-radius: 0% 0% 50% 50% / 0% 0% 8% 8% 
+}
+
+.wp-block-heading.has-text-align-center.title-1 {
+    color: var(--accent-color);
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 70px;
+}
+
+
+
