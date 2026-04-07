@@ -90,7 +90,7 @@ body {
     font-weight: 800;
 }
 
-.wp-block-cover {
+.home-container {
     border-radius: 0% 0% 50% 50% / 0% 0% 8% 8% 
 }
 
@@ -99,7 +99,27 @@ body {
     font-size: 30px;
     font-weight: 700;
     margin-top: 70px;
+    margin-bottom: 47px;
 }
 
+p.has-text-align-center {
+    margin-bottom: 82px;
+}
 
+.img-taste-left-top, .img-taste-right-top {
+    margin-bottom: 40px;
+}
 
+.wp-block-group.has-background.is-layout-constrained.wp-block-group-is-layout-constrained {
+    border-radius: 0% 0% 50% 50% / 0% 0% 4% 4%; 
+}
+
+.button-taste:hover {
+    background-color: var(--button-hover-color);
+}
+
+.entry-content > p:empty {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
