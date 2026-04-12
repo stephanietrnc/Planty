@@ -13,6 +13,8 @@
     --button-hover-color : #C02E44;
 }
 
+/* *********************** GLOBAL *********************** */
+
 body {
     background-color: var(--secondary-color);
     font-family: "Syne", sans-serif;
@@ -62,6 +64,9 @@ body {
     padding: 0;
     width: 100%;
 }
+
+
+/* *********************** PAGE D'ACCUEIL *********************** */
 
 .img-drink {
     position: absolute;
@@ -114,12 +119,88 @@ p.has-text-align-center {
     border-radius: 0% 0% 50% 50% / 0% 0% 4% 4%; 
 }
 
-.button-taste:hover {
+.wp-block-button .wp-block-button__link {
+    background-color: var(--button-color);
+}
+
+.wp-block-button .wp-block-button__link:hover {
     background-color: var(--button-hover-color);
 }
 
-.entry-content > p:empty {
-    display: none;
-    margin: 0;
-    padding: 0;
+
+/* *********************** PAGE "NOUS RENCONTRER" *********************** */
+
+.meet-title, .meet-text {
+    width: 80%;
+}
+
+.meet-container {
+    border-radius: 0% 0% 50% 50% / 0% 0% 15% 15%; 
+}
+
+.meet-container-flower {
+    position: absolute;
+    top: -90px;
+    left: -120px;
+}
+
+h2.wp-block-heading {
+    margin-bottom: 52px;
+}
+
+form.wpcf7-form p {
+    width: 80%;
+    background-color: var(--primary-color);
+}
+
+.wpcf7-form-control .wpcf7-submit .has-spinner .submit-button {
+    background-color: #E0B9B4;
+    justify-content: center;
+}
+
+.wpcf7-form-control .wpcf7-submit .has-spinner .submit-button:hover {
+    background-color: var(--button-hover-color);
+}
+
+.wpcf7-form-control-wrap {
+    background-color: var(--secondary-color);
+}
+
+.wpcf7 form label {
+    font-size: 20px;
+}
+
+.wpcf7 input.wpcf7-form-control:not([type=submit]) {
+    height: 71px;
+    border-radius: 7px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    margin-bottom: 20px;
+}
+
+.meet-plant {
+    position: absolute; 
+    right: 40px; 
+    top: 855px;
+    height: 225px;
+}
+
+.meet-form-plant {
+    position: absolute;
+    z-index: 1;
+    bottom: 325px;
+    left: 488px;
+    height: 135px;
+}
+
+
+/* ************************** PAGE DE COMMANDE *************************/
+
+.form-command {
+    display: flex;
 }
