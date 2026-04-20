@@ -26,5 +26,19 @@ add_action('wp_enqueue_scripts', function() {
         );
         });
 
+add_filter( 'wp_nav_menu_items', 'add_admin_link_menu', 10, 2 );
 
-    
+function add_admin_link_menu ( $items, $args ) {
+    // On cible uniquement le menu voulu ('primary' pour cibler le menu principal ici)
+    if ( $args->theme_location !== 'primary' ) {
+        return $items;
+    }
+
+    // Vérifie si l'utilisateur est connecté
+    if ( is_user_logged_in() ) {
+        $admin_url = admin_url(); // Retourne l'URL du tableau de bord WP
+        $items .= '<li class="menu-item"><a href="' . esc_url( $admin_url ) . '">Admin</a></li>';
+    }
+
+    return $items;
+}

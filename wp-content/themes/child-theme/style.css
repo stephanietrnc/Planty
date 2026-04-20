@@ -73,6 +73,9 @@ input.wpcf7-form-control.wpcf7-form-control:not([type=submit]):focus {
     color: var(--text-color);
 }
 
+.button, input[type="submit"] .button, input[type="submit"]:hover {
+    transition: 0.4s ease;
+}
 
 
 /* *********************** PAGE D'ACCUEIL *********************** */
@@ -249,7 +252,7 @@ input[type="submit"] {
     margin: 0;
 }
 
-/* Pour contrer une restriction de largeur par défaut sur le formulaire*/
+/* Pour contrer une restriction de largeur par défaut sur le formulaire */
 form.wpcf7-form p {
     width: 100%;
 }
@@ -356,3 +359,17 @@ article .command-page-tastes {
     font-size: 30px;
 }
 
+
+/* ********************** HOOK ADMIN ***************************** */
+
+.menu-item a {
+    color: var(--text-color);
+    font-size: 16px; 
+    font-weight: 400;
+    padding-right: 30px;
+}
+
+.menu-item a:hover {
+    font-weight: 700;
+    font-size: 13px;
+}
