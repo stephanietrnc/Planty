@@ -65,6 +65,15 @@ body {
     width: 100%;
 }
 
+input.wpcf7-form-control:not([type=submit]) {
+    color: var(--text-color);
+}
+
+input.wpcf7-form-control.wpcf7-form-control:not([type=submit]):focus {
+    color: var(--text-color);
+}
+
+
 
 /* *********************** PAGE D'ACCUEIL *********************** */
 
@@ -163,8 +172,8 @@ form.wpcf7-form p {
 
 .meet-plant {
     position: absolute; 
-    right: 40px; 
-    top: 855px;
+    right: 2%; 
+    top: 39.7%;
     height: 225px;
 }
 
@@ -200,7 +209,7 @@ form.wpcf7-form p {
     position: absolute;
     z-index: 1;
     bottom: 350px;
-    left: 34%;
+    left: 31%;
     height: 134px;
 }
 
@@ -216,23 +225,134 @@ input[type="submit"] {
 
 /* ************************** PAGE DE COMMANDE *************************/
 
-.command-form {
+.command-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+}
+
+/*Pour contrer les marges et padding injectés avec le bloc Gutenberg de CF7*/
+.command-form,
+.wp-block-contact-form-7-contact-form-selector.command-form {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.command-form .wpcf7,
+.command-form .wpcf7-form {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Pour contrer une restriction de largeur par défaut sur le formulaire*/
+form.wpcf7-form p {
+    width: 100%;
+}
+
+.command-page-tastes h3 {
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+article .command-tastes {
+    display: flex;
+    gap: 30px;
+}
+
+article .command-page-tastes {
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin: 0;
+    width: 100%;
+}
+
+.command-taste {
+    flex: 1;
+}
+
+.command-taste img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    margin-bottom: 15px;
+}
+
+.command-taste input.number-command {
+    width: 40px;
+    height: auto;
+    text-align: center;
+}
+
+.wpcf7 .wpcf7-form-control-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.number-command::-webkit-inner-spin-button,
+.number-command::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.command-taste.command-taste input.number-command {
+    padding: 0;
+    border-radius: 0; 
+    height: 55px;
+}
+
+.command-page-form {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
-.form-command h3, label {
+.command-page-form h3, label {
     color: var(--secondary-color);
 }
 
-.form-command label {
+.command-page-form label {
     font-size: 20px;
+    padding: 0;
+    margin: 0;
 }
 
-.form-command input.wpcf7-form-control {
+.command-page-form input.wpcf7-form-control {
     border-radius: 7px;
 }
 
-.form-command .left-column {
+.command-page-form .left-column {
     border-right: 1px solid var(--secondary-color);
 }
+
+.command-page-form .left-column {
+    padding-right: 45px
+}
+
+.command-page-form .right-column {
+    padding-left: 45px
+}
+
+.command-page-form .wpcf7-form-control-wrap {
+  margin-bottom: -65px;
+  width: 475px;
+  box-sizing: border-box;
+}
+
+.command-page-form {
+    margin: 55px 0 45px 0;
+}
+
+.command-page-form h3 {
+    font-size: 30px;
+}
+
