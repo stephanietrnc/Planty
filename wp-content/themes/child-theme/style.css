@@ -341,7 +341,7 @@ form.wpcf7-form p {
     width: 100%;
 }
 
-.command-page-tastes h3 {
+.command-page-tastes h2 {
     color: var(--secondary-color);
     display: flex;
     flex-direction: row;
@@ -401,12 +401,12 @@ article .command-page-tastes {
     width: 100%;
 }
 
-.command-page-form h3, label {
+.command-page-form h2, label {
     color: var(--secondary-color);
 }
 
 .command-page-form label {
-    font-size: clamp(0.875rem, 0.7679rem + 0.5357vw, 1.25rem);
+    font-size: clamp(1rem, 0.7679rem + 0.5357vw, 1.25rem); 
     padding: 0;
     margin: 0;
 }
@@ -442,7 +442,7 @@ article .command-page-tastes {
     margin: 55px 0 45px 0;
 }
 
-.command-page-form h3 {
+.command-page-form h2 {
     font-size: clamp(1.4375rem, 1.3125rem + 0.625vw, 1.875rem);
 }
 
@@ -608,7 +608,7 @@ article .command-page-tastes {
         padding: 0 20px;
     }
 
-    .command-page-tastes h3 {
+    .command-page-tastes h2 {
         justify-content: center;
     }
 
@@ -629,6 +629,10 @@ article .command-page-tastes {
 
     .command-page-form .right-column {
         padding-left: 0
+    }
+
+    .command-page-form input.wpcf7-form-control {
+    margin-bottom: 10px;
     }
 }
 
