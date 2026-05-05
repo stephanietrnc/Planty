@@ -19,11 +19,12 @@ body {
     background-color: var(--secondary-color);
     font-family: "Syne", sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: clamp(0.875rem, 0.7679rem + 0.5357vw, 1.25rem);
 }
 
 #page {
     max-width: 1440px;
+    min-width: 320px;
     margin: 0 auto;
     background-color: var(--secondary-color);
 }
@@ -32,10 +33,6 @@ body {
     margin: 0;
     max-width: 100%;
     padding: 0;
-}
-
-.menu-link {
-    font-size: 16px;
 }
 
 .menu-admin {
@@ -47,7 +44,7 @@ body {
 }
 
 .menu-link:hover {
-    font-size: 13px;
+    font-size: clamp(0.75rem, 0.7321rem + 0.0893vw, 0.8125rem);
     font-weight: 700;
 }
 
@@ -77,6 +74,12 @@ input.wpcf7-form-control.wpcf7-form-control:not([type=submit]):focus {
     transition: 0.4s ease;
 }
 
+.home-container-mobile,
+.home-tastes-mobile,
+.what-they-think-mobile{
+    display: none;
+}
+
 
 /* *********************** PAGE D'ACCUEIL *********************** */
 
@@ -90,7 +93,7 @@ input.wpcf7-form-control.wpcf7-form-control:not([type=submit]):focus {
     position: relative;
     object-fit: cover;
     height: 100%;
-    top: 70px;
+    top: 4.375rem;
 }
 
 .img-plant-left{
@@ -101,19 +104,22 @@ input.wpcf7-form-control.wpcf7-form-control:not([type=submit]):focus {
     right : 180px;
 }
 
-.wp-block-heading.has-text-align-center {
+h1.wp-block-heading.has-text-align-center.header-cover {
     color: var(--accent-color);
-    font-size: 38px;
+    font-size: clamp(1.5625rem, 0.4286rem + 2.8571vw, 3rem);
     font-weight: 800;
+    margin-top: 40px;
+    padding-top: 0;
 }
 
-.home-container {
+.home-container, 
+.home-container-mobile {
     border-radius: 0% 0% 50% 50% / 0% 0% 8% 8% 
 }
 
 .wp-block-heading.has-text-align-center.title-1 {
     color: var(--accent-color);
-    font-size: 30px;
+    font-size: clamp(1.4375rem, 1.3125rem + 0.625vw, 1.875rem); 
     font-weight: 700;
     margin-top: 70px;
     margin-bottom: 47px;
@@ -139,33 +145,105 @@ p.has-text-align-center {
     background-color: var(--button-hover-color);
 }
 
+h3.wp-block-heading.has-text-align-center.has-white-color.has-text-color {
+    font-size: clamp(1.875rem, 1.5536rem + 1.6071vw, 3rem);
+}
+
+.what-they-think-desktop h2,
+.what-they-think-mobile h2 {
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.what-they-think-desktop h3,
+.what-they-think-mobile h3 {
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.what-they-think-desktop p,
+.what-they-think-mobile p {
+    color: var(--text-color);
+    font-size: clamp(0.8125rem, 0.7589rem + 0.2679vw, 1rem);
+}
+
+.what-they-think-desktop-profiles {
+    width: 80%;
+}
+
+.what-they-think-desktop-profil {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.what-they-think-profiles {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    max-width: 400px;
+}
+
+.what-they-think-text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 50px;
+}
+
+body, html {
+    overflow-x: hidden !important;
+}
+
+.img-footer-container {
+    width: 1440px !important;
+    max-width: none !important;
+    margin-left: calc(-1 * (1440px - 100%) / 2);
+}
+
+.img-footer {
+    width: 1440px !important;
+    max-width: none !important;
+    display: block !important;
+}
+
 
 /* *********************** PAGE "NOUS RENCONTRER" *********************** */
 
 .meet-title, .meet-text {
-    width: 80%;
+    width: 60%;
+}
+
+.meet-title {
+    font-size: clamp(1.25rem, 0.9286rem + 1.6071vw, 2.375rem);
+}
+
+.meet-equip-title {
+    font-size: clamp(1.4375rem, 1.3125rem + 0.625vw, 1.875rem); 
 }
 
 .meet-container {
     border-radius: 0% 0% 50% 50% / 0% 0% 15% 15%; 
 }
 
+.meet-container-child {
+    margin: 81px 0;
+}
+
+
 .meet-container-flower {
     position: absolute;
     top: -90px;
-    left: -120px;
+    left: 50px;
 }
 
 h2.wp-block-heading {
     margin-bottom: 52px;
+    font-size: clamp(1.5625rem, 1.3125rem + 0.625vw, 1.875rem); 
 }
 
 form.wpcf7-form p {
     width: 80%;
-}
-
-.wpcf7 form label {
-    font-size: 20px;
 }
 
 .wpcf7 input.wpcf7-form-control:not([type=submit]) {
@@ -176,7 +254,7 @@ form.wpcf7-form p {
 .meet-plant {
     position: absolute; 
     right: 2%; 
-    top: 39.7%;
+    top: 40%;
     height: 225px;
 }
 
@@ -185,8 +263,7 @@ form.wpcf7-form p {
     flex-direction: column;
     align-items: center;
     z-index: 2;
-    margin-bottom: 20px;
-
+    padding: 0 20px 20px 20px;
 }
 
 .meet-form label {
@@ -194,11 +271,12 @@ form.wpcf7-form p {
     flex-direction: column;
     gap: 10px;
     color: var(--text-color);
-    font-size: 20px;
+    font-size: clamp(0.875rem, 0.7679rem + 0.5357vw, 1.25rem);
 }
 
 .meet-form br {
     display: none;
+    margin: 0 20px;
 }
 
 .meet-form p {
@@ -211,7 +289,7 @@ form.wpcf7-form p {
 .meet-form-plant {
     position: absolute;
     z-index: 1;
-    bottom: 350px;
+    bottom: 330px;
     left: 31%;
     height: 134px;
 }
@@ -222,13 +300,19 @@ input[type="submit"] {
     margin: 0 auto;
     padding: 15px 55px;
     border-radius: 5px;
-    font-size: 15px;
+    font-size: clamp(0.75rem, 0.6964rem + 0.2679vw, 0.9375rem);
 }
 
 
 /* ************************** PAGE DE COMMANDE *************************/
 
-.command-page-container {
+h1.command-page-title {
+    font-size: clamp(1.5625rem, 0.4286rem + 2.8571vw, 2.375rem); 
+    padding: 0 20px;
+    margin-bottom: 30px;
+}
+
+div .wp-block-column.has-background.is-layout-flow.wp-block-column-is-layout-flow {
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -262,7 +346,7 @@ form.wpcf7-form p {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    font-size: 30px;
+    font-size: clamp(1.4375rem, 1.3125rem + 0.625vw, 1.875rem);
     font-weight: bold;
     margin-bottom: 40px;
 }
@@ -274,13 +358,10 @@ article .command-tastes {
 
 article .command-page-tastes {
     border-bottom: 1px solid var(--secondary-color);
-    padding-bottom: 10px;
-    margin: 0;
+    border-top: 1px solid var(--secondary-color);
     width: 100%;
-}
-
-.command-taste {
-    flex: 1;
+    margin: 0 auto;
+    padding: 40px 0 20px 0;
 }
 
 .command-taste img {
@@ -319,12 +400,13 @@ article .command-page-tastes {
     justify-content: center;
     width: 100%;
 }
+
 .command-page-form h3, label {
     color: var(--secondary-color);
 }
 
 .command-page-form label {
-    font-size: 20px;
+    font-size: clamp(0.875rem, 0.7679rem + 0.5357vw, 1.25rem);
     padding: 0;
     margin: 0;
 }
@@ -345,9 +427,14 @@ article .command-page-tastes {
     padding-left: 45px
 }
 
+.command-page-form .left-column,
+.command-page-form .right-column {
+    flex: 1;
+}
+
 .command-page-form .wpcf7-form-control-wrap {
   margin-bottom: -65px;
-  width: 475px;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -356,7 +443,7 @@ article .command-page-tastes {
 }
 
 .command-page-form h3 {
-    font-size: 30px;
+    font-size: clamp(1.4375rem, 1.3125rem + 0.625vw, 1.875rem);
 }
 
 
@@ -364,12 +451,242 @@ article .command-page-tastes {
 
 .menu-item a {
     color: var(--text-color);
-    font-size: 16px; 
+    font-size: 1rem; 
     font-weight: 400;
     padding-right: 30px;
 }
 
 .menu-item a:hover {
     font-weight: 700;
-    font-size: 13px;
+    font-size: clamp(0.6875rem, 0.6518rem + 0.1786vw, 0.8125rem);
+}
+
+
+/* ******************* RESPONSIVE ********************/
+
+
+/*MENU DE NAVIGATION*/
+
+.ast-header-break-point .main-navigation ul#ast-hf-mobile-menu li.command-menu-responsive a.menu-link {
+    background-color: var(--button-color);
+    color: #FFFFFF
+}
+
+.ast-header-break-point .main-navigation ul#ast-hf-mobile-menu li.command-menu-responsive a.menu-link:active {
+    background-color: var(--button-hover-color);
+}
+
+.ast-header-break-point .main-navigation ul#ast-hf-mobile-menu li.command-menu-responsive a.menu-link:hover {
+    background-color: var(--button-hover-color);
+}
+
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 1375px) {
+    .meet-title,
+    .meet-text {
+        width: 70%;
+    }
+
+    .meet-container-flower {
+        top: -90px;
+        left: 0px;
+        width: 160px !important;
+    }
+
+    .meet-plant {
+        top: 40.2%
+    }
+
+    .meet-form-plant {
+        left: 410px;
+        bottom: 330px;
+    }
+}
+
+@media (max-width: 1320px) {
+    .meet-plant {
+        display: none;
+    }
+
+    .meet-form-plant {
+        left: 375px;
+    }
+}
+
+
+@media (max-width: 1220px) {
+    .what-they-think-desktop h3 {
+        margin-top: 0 !important;
+    }
+    
+    .meet-form-plant {
+        left: 330px;
+        bottom: 330px;
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .home-container {
+        display: none;
+}
+
+    .home-container-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-tastes {
+        display: none;
+    }
+
+    .home-tastes-mobile {
+        display: block;
+    }
+
+    .img-drink-mobile.img-drink-mobile img {
+        width: 70% !important;
+        margin: 0 auto;
+    }
+
+    .what-they-think-desktop {
+        display: none;
+    }
+
+    .what-they-think-mobile {
+        display: block;
+    }
+
+    .meet-title,
+    .meet-text {
+        width: 90%;
+    }
+
+    .meet-container-flower {
+        top: -90px;
+        left: -50px;
+        width: 150px !important;
+    }
+
+    .the-team-meet-page {
+        gap: 100px !important;
+    }
+
+    .meet-form-plant {
+        left: 265px;
+        bottom: 330px;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .meet-form-plant {
+        display: none;
+    }
+}
+
+
+@media (max-width: 920px) {
+    .meet-title,
+    .meet-text {
+        width: 100%;
+    }  
+  
+    .meet-container-flower {
+    display: none;
+    }
+
+    article .command-tastes {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-around;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .command-page-tastes h3 {
+        justify-content: center;
+    }
+
+    .command-page-form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    }
+
+    .command-page-form .left-column {
+        border-right: none;
+    }
+
+    .command-page-form .left-column {
+        padding-right: 0;
+        margin-bottom: 70px;
+    }
+
+    .command-page-form .right-column {
+        padding-left: 0
+    }
+}
+
+
+@media (max-width: 780px) {
+  .what-they-think-profiles .no-stack {
+    flex-wrap: nowrap !important;
+    min-width: 0;
+    }   
+
+    .what-they-think-text {
+    padding-left: 0;
+    }
+
+    .meet-plant {
+        display: block;
+        top: 55.5%;
+        right:  0%;
+        
+    }
+
+    .wp-block-image img {
+        max-width: 90%;
+    }
+}
+
+
+@media (max-width: 545px) {
+     .meet-plant {
+        display: none;
+    }
+
+    .meet-container-child {
+        margin-bottom: 0px;
+    }
+}
+
+
+@media (max-width: 470px) {
+    article .command-tastes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media (max-width: 320px) {
+.wp-block-heading.has-text-align-center.title-1 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+p.has-text-align-center {
+    margin-bottom : 50px;
+}
+
+.wp-block-button .wp-block-button__link {
+    margin: 0 0 15px 0;
+}
 }

@@ -26,6 +26,8 @@ add_action('wp_enqueue_scripts', function() {
         );
         });
 
+/********************** HOOK ADMIN ********************/
+
 add_filter( 'wp_nav_menu_items', 'add_admin_link_menu', 10, 2 );
 
 function add_admin_link_menu ( $items, $args ) {
