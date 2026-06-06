@@ -11,20 +11,20 @@ add_action('wp_enqueue_scripts', function() {
         array('parent-style')
     );
         
-        // Pour se préconnecter à Google Fonts (performance)
-        wp_enqueue_style(
-            'google-fonts-preconnect',
-            'https://fonts.googleapis.com',
-            false   
-        );
+    // Pour se préconnecter à Google Fonts (performance)
+    wp_enqueue_style(
+        'google-fonts-preconnect',
+        'https://fonts.googleapis.com',
+        false   
+    );
 
-        // Pour charge la police de Google Fonts
-        wp_enqueue_style(
-            'police-syne',
-            'https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap',
-            false
-        );
-        });
+    // Pour charger la police de Google Fonts
+    wp_enqueue_style(
+        'police-syne',
+        'https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap',
+        false
+    );
+    });
 
 /********************** HOOK ADMIN ********************/
 
