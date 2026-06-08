@@ -74,7 +74,6 @@ input.wpcf7-form-control.wpcf7-form-control:not([type="submit"]):focus {
     transition: 0.4s ease;
 }
 
-.home-container-mobile,
 .home-tastes-mobile,
 .what-they-think-mobile{
     display: none;
@@ -112,9 +111,12 @@ h1.wp-block-heading.has-text-align-center.header-cover {
     padding-top: 0;
 }
 
-.home-container, 
-.home-container-mobile {
+.home-container  {
     border-radius: 0% 0% 50% 50% / 0% 0% 8% 8% 
+}
+
+.is-layout-constrained > .aligncenter {
+    display: none;
 }
 
 .wp-block-heading.has-text-align-center.title-1 {
@@ -530,15 +532,12 @@ article .command-page-tastes {
 
 
 @media (max-width: 1100px) {
-    .home-container {
+    figure.wp-block-gallery.has-nested-images {
         display: none;
-}
+    }
 
-    .home-container-mobile {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .is-layout-constrained > .aligncenter {
+    display: block;
     }
 
     .home-tastes {
@@ -547,11 +546,6 @@ article .command-page-tastes {
 
     .home-tastes-mobile {
         display: block;
-    }
-
-    .img-drink-mobile.img-drink-mobile img {
-        width: 70% !important;
-        margin: 0 auto;
     }
 
     .what-they-think-desktop {
